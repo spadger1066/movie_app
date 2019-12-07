@@ -8,7 +8,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
 
-const moviesData = require('./data');
+const moviesData = require('./data.json');
 
 app.prepare().then(() => {
 
@@ -17,6 +17,12 @@ app.prepare().then(() => {
 
     server.get('/api/v1/movies', (req, res) => {
         return res.json(moviesData)
+    });
+
+    server.get('/api/v1/movies/:id', (req, res) => {
+        const { id } = req.params;
+        const movie = moviesData.find(m => m.id === id);
+        return res.json(movie)
     });
 
     server.post('/api/v1/movies', (req, res) => {
