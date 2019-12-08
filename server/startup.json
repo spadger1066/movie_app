@@ -8,7 +8,7 @@
     "rating": 4.8,
     "genre": "drama",
     "cover": "https://images.unsplash.com/photo-1507924538820-ede94a04019d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-    "image": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg"
+    "image" : "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg"
   },
   {
     "id": "2",
@@ -31,25 +31,5 @@
     "genre": "adventure, drama, fantasy",
     "cover": "https://images.unsplash.com/photo-1462759353907-b2ea5ebd72e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80",
     "image": "https://img.cinemablend.com/filter:scale/quill/0/f/5/2/a/6/0f52a6843a25c1a5c1f9a0c00548cad9e1d912e2.jpg?mw=600"
-  },
-  {
-    "name": "Ford vs Ferrari",
-    "description": "Ford and ferrari at the 1966 Le Mans",
-    "rating": "5",
-    "image": "https://m.media-amazon.com/images/M/MV5BMWU4NjZiM2MtZWUzOC00NjlmLWExNGEtMDZhODA0OTliNTVhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_SX800_AL_.jpg",
-    "cover": "https://m.media-amazon.com/images/M/MV5BODAyYTlkMTYtZjdjZC00Yjg4LTgxODktYTg4Nzc3MDhjMWIwXkEyXkFqcGdeQXVyMTAzMjU1MDkx._V1_SX1777_CR0,0,1777,942_AL_.jpg",
-    "longDesc": "",
-    "genre": "drama,action",
-    "id": "ut7k3"
-  },
-  {
-    "name": "new movie",
-    "description": "new movie",
-    "rating": "3",
-    "image": "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-    "cover": "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-    "longDesc": "long desc",
-    "genre": "action",
-    "id": "j10xg"
   }
 ]

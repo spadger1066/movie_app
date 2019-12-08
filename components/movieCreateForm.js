@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 
 const MovieCreateForm = (props) => {
-    const [form, setForm] = useState({
+    const defaultData = {
         name: '',
         description: '',
         rating: '',
         image: '',
         cover: '',
         longDesc: ''
-    });
+    };
+
+    const formData = props.initialData ? {...props.initialData} : defaultData;
+
+    const [form, setForm] = useState(formData);
+
+    // useEffect(() => {
+    //     if (props.initialData) {
+    //         setForm(props.initialData);
+    //     } else {
+    //         alert('Some issue with useEffect')
+    //     }
+    // }, [props.initialData]);
 
     const handleChange = (event) => {
         const target = event.target;
@@ -45,17 +57,17 @@ const MovieCreateForm = (props) => {
             <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp" value={form.name}
-                       onChange={handleChange} placeholder="Lord of the Rings"/>
+                       onChange={handleChange} placeholder="Movie name..."/>
             </div>
             <div className="form-group">
                 <label htmlFor="description">Description</label>
                 <input type="text" className="form-control" id="description" name="description" value={form.description}
-                       onChange={handleChange} placeholder="Somewhere in Middle-earth..."/>
+                       onChange={handleChange} placeholder="Movie description..."/>
             </div>
             <div className="form-group">
                 <label htmlFor="rating">Rating</label>
                 <input type="number" max="5" min="0" className="form-control" id="rating" name="rating" value={form.rating}
-                       onChange={handleChange} placeholder="3"/>
+                       onChange={handleChange} placeholder="0"/>
                 <small id="emailHelp" className="form-text text-muted">Max: 5, Min: 0 </small>
             </div>
             <div className="form-group">
