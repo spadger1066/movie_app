@@ -14,7 +14,7 @@ class Posts extends Component {
                 <ul>
                     {
                         posts.map((p) => (
-                            <li>
+                            <li key={p.id}>
                                 <span>{p.id}: </span><span>{p.title}</span>
                             </li>
                         ))
