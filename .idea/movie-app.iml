@@ -11,5 +11,6 @@
     <orderEntry type="library" name="@types/node" level="application" />
     <orderEntry type="library" name="@types/body-parser" level="application" />
     <orderEntry type="library" name="@types/requirejs" level="application" />
+    <orderEntry type="library" name="@types/react-router" level="application" />
   </component>
 </module>

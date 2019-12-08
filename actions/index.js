@@ -21,9 +21,7 @@ export const getCategories = () => {
 };
 
 export const getMovies = () => {
-    return axios.get(`${BASE_URL}/api/v1/movies`).then((res) => {
-        return res.data
-    })
+    return axios.get(`${BASE_URL}/api/v1/movies`).then(res => res.data);
     // return new Promise((resolve, reject) => {
     //     setTimeout(() => {
     //         resolve(MOVIE_DATA);
@@ -33,14 +31,16 @@ export const getMovies = () => {
 };
 
 export const createMovie = (movie) => {
-    return new Promise((resolve, reject) => {
-        movie.id = Math.random().toString(36).substr(2, 7);
-        MOVIE_DATA.push(movie);
-        setTimeout(() => {
-            resolve(MOVIE_DATA);
-            reject('Cannot fetch data')
-        }, 50)
-    })
+    movie.id = Math.random().toString(36).substr(2, 5);
+    return axios.post(`${BASE_URL}/api/v1/movies`, movie).then(res => res.data);
+    // return new Promise((resolve, reject) => {
+    //     movie.id = Math.random().toString(36).substr(2, 7);
+    //     MOVIE_DATA.push(movie);
+    //     setTimeout(() => {
+    //         resolve(MOVIE_DATA);
+    //         reject('Cannot fetch data')
+    //     }, 50)
+    // })
 };
 
 export const getMovieById = (id) => {
@@ -50,4 +50,8 @@ export const getMovieById = (id) => {
     //     const movie = MOVIE_DATA[movieIndex];
     //     setTimeout(() => resolve(movie), 50)
     // })
+};
+
+export const deleteMovie = (id) => {
+    return axios.delete(`${BASE_URL}/api/v1/movies/${id}`).then(res => res.data);
 };
