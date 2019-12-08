@@ -11,16 +11,7 @@ const MovieCreateForm = (props) => {
     };
 
     const formData = props.initialData ? {...props.initialData} : defaultData;
-
     const [form, setForm] = useState(formData);
-
-    // useEffect(() => {
-    //     if (props.initialData) {
-    //         setForm(props.initialData);
-    //     } else {
-    //         alert('Some issue with useEffect')
-    //     }
-    // }, [props.initialData]);
 
     const handleChange = (event) => {
         const target = event.target;
@@ -95,7 +86,7 @@ const MovieCreateForm = (props) => {
                     <option>fantasy</option>
                 </select>
             </div>
-            <button onClick={submitForm} type="button" className="btn btn-primary">Create</button>
+            <button onClick={submitForm} type="button" className="btn btn-primary">{props.submitButton || 'Create'}</button>
         </form>
     );
 };

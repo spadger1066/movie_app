@@ -46,12 +46,27 @@ app.prepare().then(() => {
 
     server.patch('/api/v1/movies/:id', (req, res) => {
         const { id } = req.params;
-        return res.json({message: `Updating post of id: ${id}`})
+        const movie = req.body;
+        const movieIndex = moviesData.findIndex(m => m.id === id);
+        // Update the movie
+        moviesData[movieIndex] = movie;
+
+        const pathToFile = path.join(__dirname, filePath);
+        const stringifiedData = JSON.stringify(moviesData, null, 2);
+
+        fs.writeFile(pathToFile, stringifiedData, (err) => {
+            if (err) {
+                return res.status(422).send(err)
+            }
+            return res.json(movie)
+        });
+        // return res.json({message: `Updating post of id: ${id}`})
     });
 
     server.delete('/api/v1/movies/:id', (req, res) => {
         const { id } = req.params;
         const movieIndex = moviesData.findIndex(m => m.id === id);
+        // cut the movie
         moviesData.splice(movieIndex, 1);
 
         const pathToFile = path.join(__dirname, filePath);
